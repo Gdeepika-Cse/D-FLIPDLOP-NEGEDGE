@@ -1,16 +1,17 @@
+# NAME: DEEPIKA G
+# REG.NO: 212224040060
 # D-FLIPDLOP-NEGEDGE
-
-**AIM:**
+# AIM:
 
 To implement  D flipflop using verilog and validating their functionality using their functional tables
 
-**SOFTWARE REQUIRED:**
+# SOFTWARE REQUIRED:
 
 Quartus prime
 
-**THEORY**
+# THEORY:
 
-**D Flip-Flop**
+# D Flip-Flop:
 
 D flip-flop operates with only positive clock transitions or negative clock transitions. Whereas, D latch operates with enable signal. That means, the output of D flip-flop is insensitive to the changes in the input, D except for active transition of the clock signal. The circuit diagram of D flip-flop is shown in the following figure.
 
@@ -26,7 +27,7 @@ Therefore, D flip-flop always Hold the information, which is available on data i
 
 Next state of D flip-flop is always equal to data input, D for every positive transition of the clock signal. Hence, D flip-flops can be used in registers, shift registers and some of the counters.
 
-**Procedure**
+# Procedure:
 
 1.Type the program in Quartus software.
 
@@ -38,21 +39,27 @@ Next state of D flip-flop is always equal to data input, D for every positive tr
 
 5.For different input combinations generate the timing diagram.
 
-**PROGRAM**
+# PROGRAM:
 
-![image](https://github.com/user-attachments/assets/a740124d-e046-4b58-b180-0ffca31c70de)
+```
+module DFLIPFLOPNEGEDGE(D,Clock,reset,Q);
+input D,reset,Clock;
+output reg Q;
+always @ (negedge Clock)
+if(!reset)
+Q <= 0;
+else
+Q <= D;
+endmodule
+```
+# RTL LOGIC FOR FLIPFLOPS:
 
-Developed by: DEEPIKA G RegisterNumber:212224040060
-
-**RTL LOGIC FOR FLIPFLOPS**
-
-![image](https://github.com/user-attachments/assets/ef6b6c67-dfe2-4ff0-8309-a71909d76d36)
+![image](https://github.com/user-attachments/assets/b12aa691-96da-4540-9861-a8c4410ced52)
 
 
-**TIMING DIAGRAMS FOR FLIP FLOPS**
+# TIMING DIGRAMS FOR FLIP FLOPS:
 
-![image](https://github.com/user-attachments/assets/cf9072e7-1d40-46f7-bafc-4af22060d706)
+![image](https://github.com/user-attachments/assets/3bef8a0c-807d-4297-a197-deca9874fa80)
 
-**RESULTS**
-
-Thus D flipflop is implemented using verilog and their fuctionally using their functional tables is validated.
+# RESULTS:
+Thus the program to implement a D flipflop using verilog and validating their functionality using their functional tables
